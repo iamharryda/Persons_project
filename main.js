@@ -11,6 +11,7 @@ let userUrl = "https://jsonplaceholder.typicode.com/users"
 const getData = async () => {
     let response = await fetch(userUrl);
     let users = await response.json();
+    console.log(users)
     for (let i = 0; i < 10; i++) {
         names[i].innerHTML = users[i].name
         usernames[i].innerHTML = users[i].username
